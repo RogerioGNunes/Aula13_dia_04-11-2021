@@ -1,8 +1,8 @@
 public class Aluno extends Pessoa{
 
-    cursos String cursos;
-    notas Double notas1;
-    notas Double notas2;
+    private String cursos;
+    private double notas1;
+    private double notas2;
 
     public void setCursos(String cursos){
         this.cursos = cursos;
@@ -11,17 +11,17 @@ public class Aluno extends Pessoa{
         return this.cursos;
     }
 
-    public void setNotas1(Double setNotas1){
+    public void setNotas1(double notas1){
         this.notas1 = notas1;
     }
-    public Double getNotas1(){
+    public double getNotas1(){
         return this.notas1;
     }
 
-    public void setNotas2(Double setNotas2){
+    public void setNotas2(double notas2){
         this.notas2 = notas2;
     }
-    public Double getNotas2(){
+    public double getNotas2(){
         return this.notas2;
     }
 
@@ -30,14 +30,14 @@ public class Aluno extends Pessoa{
         return (this.notas1 + this.notas2) / 2.0;
     }
 
-    public double verificaAprovacao(){
+    public boolean verificaAprovacao(){
 
         boolean condicao;
 
         if(calculaMedia() < 6.0){
             condicao = false;
         }else{
-            coondicao = True;
+            condicao = true;
         }
         return condicao;
     } 
